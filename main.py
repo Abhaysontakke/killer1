@@ -363,35 +363,30 @@ async def run_bot(bot: Client, m: Message):
         await m.reply_document(document=txt_file,caption="Here is your txt file.")
         os.remove(txt_file)
         
-@bot.on_message(filters.command(["txt"])&(filters.chat(auth_users)))
-async def txt_handler(bot: Client, m: Message):
-    
-    if batch != []:
-        await m.reply("**⚠️ One Process Is Already Running**", quote=True)
-        return
-    else:
-        batch.append(f'{m.from_user.id}')
-        editable  = await m.reply_text("Send links listed in a txt file in format **Name:link**") 
-    input0: Message = await bot.listen(editable.chat.id, filters.user(m.from_user.id))
-    x = await input0.download()
-    await bot.send_document(log_channel, x)
-    await input0.delete(True)
-    file_name, ext = os.path.splitext(os.path.basename(x))
-    credit = "Downloaded by " + f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
-    try:         
-        with open(x, "r") as f:
-             content = f.read()
-             content = content.split("\n")
-        links = []
-        for i in content:
-           if i != '':
-                 links.append(i)
-        os.remove(x)
-    except Exception as e:
-        logging.error(e)
-        await m.reply_text("Invalid file input ❌.")
-        os.remove(x)
-        return
+@bot.on_message(filters.command('txt'))
+async def vision_pdf(bot: Client, m: Message):
+    editable = await m.reply_text("Send txt file")
+    input: Message = await bot.listen(editable.chat.id)
+    if 2 + 2 == 4: #hehe
+        x = await input.download()
+        await input.delete(True)
+
+        path = f"./downloads/{m.chat.id}"
+
+        try:
+            with open(x, "r") as f:
+                content = f.read()
+            content = content.split("\n")
+
+            links = []
+            for i in content:
+                links.append(i.split(":", 1))
+            os.remove(x)
+        except:
+            await m.reply_text("Invalid file input.")
+            os.remove(x)
+            return
+            
     await editable.edit(f"Total links found are **{len(links)}**\n\nSend From where you want to download initial is **1**")
     input1: Message = await bot.listen(editable.chat.id, filters.user(m.from_user.id))
     raw_text = input1.text
