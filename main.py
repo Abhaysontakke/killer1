@@ -506,9 +506,9 @@ async def txt_handler(bot: Client, m: Message):
             else:
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'               
             try:
-                Show = f"**Trying To Download:-**\n\n**Name :-** `{name}`\n**Quality :-** `{res}`\n\n**Piracy is illegal stoner 🚫**\n\nEnter /terms To know our terms and conditions."
+                Show = f"**Trying To Download:-**\n\n**Name :-** `{name}`\n**Quality :-** `{res}`\n\n**𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲:➣@vsp_official**\n\nEnter /terms To know our terms and conditions."
                 prog = await m.reply_text(Show)
-                cc = f'[ 🎥 ] **Vid ID ➠ **{str(count).zfill(3)}\n\n**File Name ➠ **{name}.mkv\n\n**Batch ➠ **{b_name}\n\n**{creditx}**'
+                cc = f'[ 🎥 ] **Vid ID ➤ **{str(count).zfill(3)}\n\n**File Name ➤ **{name}.mkv\n\n**Batch ➤ **{b_name}\n\n**{creditx}**'
                 if cmd == "pdf" in url or ".pdf"  in url or "drive"  in url:
                     try:
                         ka=await helper.aio(url,name)
@@ -516,7 +516,7 @@ async def txt_handler(bot: Client, m: Message):
                         time.sleep(1)
                         reply = await m.reply_text(f"Trying To Upload - `{name}`")
                         time.sleep(1)
-                        copy = await bot.send_document(chat_id = m.chat.id, document = ka, caption=f'[ 📕 ] **Index » ** {str(count).zfill(3)}\n\n**File Name » ** {name}.pdf\n\n**Batch » ** {b_name}\n\n{creditx}')
+                        copy = await bot.send_document(chat_id = m.chat.id, document = ka, caption=f'[ 📕 ] **Index ➣ ** {str(count).zfill(3)}\n\n**File Name ➣ ** {name}.pdf\n\n**Batch ➣ ** {b_name}\n\n{creditx}')
                         await copy.copy(chat_id = log_channel)
                         count+=1
                         await reply.delete (True)
