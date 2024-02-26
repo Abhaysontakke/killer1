@@ -1,7 +1,7 @@
 api_id = 25791987
 api_hash = "5e2095886ba9bf8187bf56753e922adc"
-bot_token = "6749932097:AAE8M6HUF-pmDRd6WO2seFp21iWisjT9RwI"
+bot_token = "7100609304:AAFXF2xweKFP17-kFm0ljbm5hFaiOWGXEGs"
 auth_users = [6804421130,6748451207,6986305640,5721835845]
 sudo_user = -1002041893808
-log_channel = -1002050250893
-txt_channel = -1002050250893
+log_channel = -1002118015180
+txt_channel = -1002118015180
