@@ -50,7 +50,7 @@ bot = Client(
 @bot.on_message(filters.command(["start"])&(filters.chat(auth_users)))
 async def start_handler(bot: Client, m: Message):        
         editable = await m.reply_text(
-            "ʜᴇʟʟᴏ 🙋‍♂️ **ɪ ᴀᴍ ᴀ ᴛxᴛ ᴜᴘʟᴏᴀᴅᴇʀ ʙᴏᴛ**.\n\n**ᴄʀᴇᴀᴛᴏʀ** : @vsp_official™🇮🇳\n**ʟᴀɴɢᴜᴀɢᴇ** : ᴘʏᴛʜᴏɴ\n**ғʀᴀᴍᴇᴡᴏʀᴋ** : ᴘʏʀᴏɢʀᴀᴍ\n\n/txt - **ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ғʀᴏᴍ ᴛxᴛ ғɪʟᴇ.**\n/terms - **ᴛᴏ ᴋɴᴏᴡ ᴏᴜʀ ᴛᴇᴀʀᴍs ᴀɴᴅ ᴄᴏɴᴅɪᴛɪᴏɴs.**")
+            "ʜᴇʟʟᴏ 🙋‍♂️ **ɪ ᴀᴍ ᴀ ᴛxᴛ ᴜᴘʟᴏᴀᴅᴇʀ ʙᴏᴛ**.\n\n**ᴄʀᴇᴀᴛᴏʀ** : @Killlleeerr 🇮🇳\n**ʟᴀɴɢᴜᴀɢᴇ** : ᴘʏᴛʜᴏɴ\n**ғʀᴀᴍᴇᴡᴏʀᴋ** : ᴘʏʀᴏɢʀᴀᴍ\n\n/txt - **ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ғʀᴏᴍ ᴛxᴛ ғɪʟᴇ.**\n/terms - **ᴛᴏ ᴋɴᴏᴡ ᴏᴜʀ ᴛᴇᴀʀᴍs ᴀɴᴅ ᴄᴏɴᴅɪᴛɪᴏɴs.**")
             
 @bot.on_message(filters.command(["restart"]))
 async def restart_handler(bot: Client, m: Message):
@@ -506,9 +506,9 @@ async def txt_handler(bot: Client, m: Message):
             else:
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'               
             try:
-                Show = f"**Trying To Download:-**\n\n**Name :-** `{name}`\n**Quality :-** `{res}`\n\n**𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲:➣@vsp_official**\n\nEnter /terms To know our terms and conditions."
+                Show = f"**Trying To Download:-**\n\n**Name :-** `{name}`\n**Quality :-** `{res}`\n\n**𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲:➣@Killlleeerr**\n\nEnter /terms To know our terms and conditions."
                 prog = await m.reply_text(Show)
-                cc = f'[ 🎥 ] **Vid ID ➤ **{str(count).zfill(3)}\n\n**File Name ➤ **{name}.mkv\n\n**Batch ➤ **{b_name}\n\n**{creditx}**'
+                cc = f'[ 🎥 ] **Vid ID ➤ **{str(count).zfill(3)}\n\n**File Name ➤ **{name}KILLER.mkv\n\n**Batch ➤ **{b_name}\n\n**{creditx}**'
                 if cmd == "pdf" in url or ".pdf"  in url or "drive"  in url:
                     try:
                         ka=await helper.aio(url,name)
