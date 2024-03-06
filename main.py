@@ -508,7 +508,7 @@ async def txt_handler(bot: Client, m: Message):
             try:
                 Show = f"**Trying To Download:-**\n\n**Name :-** `{name}`\n**Quality :-** `{res}`\n\n**𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲:➣@Killlleeerr**\n\nEnter /terms To know our terms and conditions."
                 prog = await m.reply_text(Show)
-                cc = f'[ 🎥 ] **Vid ID ➤ **{str(count).zfill(3)}\n\n**File Name ➤ **{name}KILLER.mkv\n\n**Batch ➤ **{b_name}\n\n**{creditx}**'
+                cc = f'[ 🎥 ] **Vid ID ➤ **{str(count).zfill(3)}\n\n**File Name ➤ **{name}🅺🅸🅻🅻🅴🆁.mkv\n\n**Batch ➤ **{b_name}\n\n**{creditx}**'
                 if cmd == "pdf" in url or ".pdf"  in url or "drive"  in url:
                     try:
                         ka=await helper.aio(url,name)
